@@ -1,0 +1,38 @@
+<br>
+<div class="centro"><img src="../../../assets/icons/atendimento-ao-cliente.png" width ="200px" alt=""></div>
+<br>
+<div class="centro"><button type="button" class="btn btn-primary btn-outline-dark btn-lg "style="color: white" routerLink="cadastrar">Novo Cliente</button></div>
+<br>
+<p class="centro negrito2">Para cria uma nova conta clique em ação e seleciona "Criar Conta"</p>
+<table class="table table-dark table-striped table-bordered">
+
+  <thead>
+    <tr class="negrito">
+      <th scope="col">id</th>
+      <th scope="col">nome</th>
+      <th scope="col">cpf</th>
+      <th scope="col">email</th>
+      <th scope="col">observacoes</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="negrito" *ngFor="let cliente of clientes">
+      <th scope="row">{{cliente.id}}</th>
+      <td>{{cliente.nome}}</td>
+      <td>{{cliente.cpf}}</td>
+      <td>{{cliente.email}}</td>
+      <td>{{cliente.observacoes}}</td>
+      <td><div class="dropdown">
+        <button class="btn btn-primary btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Ação
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" [routerLink]="['editar', cliente.id]">editar</a></li>
+          <li><a class="dropdown-item" (click)="confirmar(cliente.id)">Remover</a></li>
+          <li><a class="dropdown-item" [routerLink]="['/contas', cliente.id, 'cadastrar']">Criar conta</a></li>
+        </ul>
+      </div></td>
+    </tr>
+  </tbody>
+</table>

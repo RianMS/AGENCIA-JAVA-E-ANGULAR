@@ -1,0 +1,14 @@
+.text-input{
+  width:300px
+
+}
+.centro{
+  display: flex;
+  justify-content: center;
+}
+.negrito {
+  color: aliceblue;
+  font-weight: bold;
+  text-shadow: 0 0 2px rgb(0, 0, 0);
+}
+

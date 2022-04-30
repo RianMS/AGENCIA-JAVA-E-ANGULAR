@@ -1,0 +1,18 @@
+.centro{
+  display: flex;
+  justify-content: center;
+}
+.centro2{
+  margin-left: 9.7rem;
+}
+.negrito {
+  font-weight: bold;
+  text-shadow: 0 0 2px rgb(255, 255, 255);
+}
+.negrito2 {
+  color: aliceblue;
+  font-weight: bold;
+  text-shadow: 0 0 2px rgb(0, 0, 0);
+}
+
+

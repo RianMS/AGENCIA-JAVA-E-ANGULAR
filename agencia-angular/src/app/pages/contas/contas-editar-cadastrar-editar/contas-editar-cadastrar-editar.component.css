@@ -1,0 +1,22 @@
+.text-input{
+  width:400px
+
+}
+.centro{
+  display: flex;
+  justify-content: center;
+}
+.centro2{
+  margin-left: 5.5rem;
+}
+.negrito {
+  color: aliceblue;
+  font-weight: bold;
+  text-shadow: 0 0 2px rgb(0, 0, 0);
+}
+.negrito2 {
+  color: aliceblue;
+  font-weight: bold;
+  text-shadow: 0 0 2px rgb(0, 0, 0);
+}
+

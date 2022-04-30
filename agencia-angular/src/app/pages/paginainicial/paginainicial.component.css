@@ -1,0 +1,46 @@
+.containerInicial{
+  display: flex;
+  justify-content: space-around;
+}
+.containerInicial div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+
+}
+.centro{
+  margin-left: 1.5rem;
+}
+.centro2{
+  margin-right: 1.7rem;
+}
+.cor{
+  color: aliceblue;
+  text-shadow: 0 0 2px rgb(0, 0, 0)
+}
+.centrocliente{
+  margin-left: 4.5rem;
+}
+.clientecontainer{
+  display: flex;
+  justify-content: space-around;
+}
+.clientecontainer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.roxo{
+  color: rgb(221, 0, 255);
+  font-weight: bolder;
+  font-size: 70px;
+  text-shadow: 0 0 4px rgb(0, 0, 0);
+}
+.cinza{
+  font-size: 20px;
+  color: rgb(199, 168, 211)
+
+}
+
+

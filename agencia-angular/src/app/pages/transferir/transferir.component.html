@@ -1,0 +1,34 @@
+<br>
+<div class="centro"><img src="../../../assets/icons/adicionar-contato.png"[width]="150" alt=""></div>
+<div class="centro"><h1 class="negrito">Transferencia</h1></div>
+<div class="centro">
+  <br>
+
+  <form [formGroup]="formTransferir" (ngSubmit)="transferencia()">
+    <div class="mb-3 text-input negrito">
+      <label for="agencia" class="form-label">Agencia de Destino</label>
+      <input type="text" class="form-control" id="agenciaDestino" formControlName="agenciaDestino">
+    </div>
+    <div class="mb-3 text-input negrito">
+      <label for="numero" class="form-label">Agencia de Origem"</label>
+      <input type="text" class="form-control" id="numero" formControlName="agenciaOrigem">
+    </div>
+    <div class="mb-3 text-input negrito">
+      <label for="saldo" class="form-label">Numero da Conta Destino</label>
+      <input type="text" class="form-control" id="saldo" formControlName="numeroContaDestino">
+    </div>
+    <div class="mb-3 text-input negrito">
+      <label for="saldo" class="form-label">Numero da Conta Origem</label>
+      <input type="text" class="form-control" id="saldo" formControlName="numeroContaOrigem">
+    </div>
+    <div class="mb-3 text-input negrito">
+      <label for="saldo" class="form-label">Valor da transferencia</label>
+      <input type="text" class="form-control" id="saldo" formControlName="valor">
+    </div>
+
+
+    <button type="submit" class="btn btn-dark">Enviar</button>
+  </form>
+</div>
+
+

@@ -1,0 +1,32 @@
+<div class="centro"><img src="../../../../assets/icons/avaliacao-do-cliente.png" width="200px" alt=""></div>
+  <div class="centro"><h1 class="negrito">Cadastrar conta</h1>
+  </div>
+<br>
+<div class="centro">
+
+  <form [formGroup]="formConta" (ngSubmit)="enviar()">
+    <div class="mb-3">
+      <label for="nome" class="form-label">Cliente</label>
+      <select *ngIf="!clientePorCPF" class="form-select" formControlName="cliente">
+        <option value="null" hidden>Selecionar um cliente...</option>
+        <option *ngFor="let cliente of clientes" [value]="cliente.id">{{ cliente.nome }}</option>
+      </select>
+      <input *ngIf="clientePorCPF" class="form-control" disabled type="text" [value]="clientePorCPF?.nome">
+    </div>
+    <div class="mb-3">
+      <label for="nome" class="form-label">Agência</label>
+      <input type="text" class="form-control" formControlName="agencia" maxlength="4">
+    </div>
+    <div class="mb-3">
+      <label for="nome" class="form-label">Número da conta</label>
+      <input type="text" class="form-control" formControlName="numero" maxlength="5">
+    </div>
+    <div class="mb-3">
+      <label for="nome" class="form-label">Saldo</label>
+      <input type="text" class="form-control" formControlName="saldo">
+    </div>
+    <button [disabled]="!formConta.valid" type="submit" class="btn btn-dark">
+      Enviar
+    </button>
+  </form>
+</div>

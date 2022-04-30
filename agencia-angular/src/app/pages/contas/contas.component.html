@@ -1,0 +1,42 @@
+<div class="centro"><img src="../../../assets/icons/blogar.png" width ="250px" alt=""></div>
+
+<br>
+<P class="centro negrito2">Para Criar uma Nova conta Clique em "AÇÃO" depois em "NOVA CONTA"!</P>
+<table class="table table-dark table-striped table-bordered">
+  <thead>
+    <tr>
+
+      <th scope="col">agencia</th>
+      <th scope="col">numero</th>
+      <th scope="col">saldo</th>
+      <th scope="col">cliente</th>
+      <th scope="col">nome</th>
+      <th scope="col">ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="negrito" *ngFor="let conta of contas">
+
+      <th scope="row">{{conta.agencia}}</th>
+      <th scope="row">{{conta.numero}}</th>
+      <th scope="row">{{conta.saldo}}</th>
+      <th scope="row">{{conta.cliente.nome}}</th>
+      <th scope="row">{{conta.cliente.email}}</th>
+      <th><div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Acão
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item"[routerLink]="['/contas', conta.id, 'editar']">Editar</a></li>
+          <li><a class="dropdown-item" (click)="confirmar(conta.id)">Remover</a></li>
+          <li><a class="dropdown-item" [routerLink]="['/contas', conta.id, 'cadastrar']">Nova Conta</a></li>
+          <li><a class="dropdown-item" [routerLink]="['saque']">Sacar</a></li>
+
+        </ul>
+      </div></th>
+
+
+    </tr>
+  </tbody>
+</table>
+
